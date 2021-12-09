@@ -228,6 +228,7 @@ async function getStaticProps(context) {
   const selectedMeetup = await meetupsCollection.findOne({
     _id: Object(external_mongodb_["ObjectId"])(meetupId)
   });
+  console.log(selectedMeetup);
   client.close();
   return {
     props: {
